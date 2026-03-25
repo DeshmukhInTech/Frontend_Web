@@ -22,43 +22,50 @@ a {
   color: black;
 }
 
-main {
-  width: 100%;
-}
-main .view1 {
-  width: 100%;
-  height: 100vh;
-  background-image: url(resource/bg-01.jpg);
-  background-position: center;
-  background-size: cover;
-}
-main .view1 .overlay {
+.overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.42);
   z-index: 1;
 }
+
+/* ================= MIXINS ================= */
+/* ================= MAIN ================= */
+main {
+  width: 100%;
+}
+main .view1,
+main .view2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+main .view1 {
+  background: url("resource/bg-01.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+}
 main .view1 .content1 {
   z-index: 2;
-  color: #ffffff;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 main .view1 .content1 h1 {
   text-align: center;
-  font-size: 2rem;
-  color: #ffffff;
   font-family: headings;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 main .view1 .content1 p {
@@ -72,25 +79,98 @@ main .view1 .content1 p {
 }
 main .view1 .content1 button {
   padding: 0.8rem 2.5rem;
-  color: #ffffff;
+  color: #fff;
   background: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
 }
 main .view2 {
+  background: url("resource/bg-02.png") center/cover no-repeat;
+}
+main .view3 {
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background: url("resource/bg-05.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .view3 .content3 {
+  z-index: 2;
+  color: #fff;
+  padding: 1rem;
   width: 100%;
-  height: 100vh;
-  background-image: url(resource/bg-02.png);
-  background-position: center;
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .view3 .content3 h1 {
+  text-align: center;
+  font-family: headings;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+main .view3 .content3 p {
+  text-align: center;
+  font-family: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7019607843);
+  margin-bottom: 30px;
+}
+main .view3 .content3 h3 {
+  text-align: center;
+  font-family: headings;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+main .view3 .content3 .course-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .view3 .content3 .course-container .course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .view3 .content3 .course-container .course p {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+main .view3 .content3 .course-container .course i {
+  font-size: 2rem;
 }
 
+/* ================= MEDIA ================= */
 @media (min-width: 900px) {
-  main .view1 .content1 h1 {
+  main h1 {
     font-size: 4rem;
     letter-spacing: 8px;
   }
-  main .view1 .content1 p {
+  main p {
     font-size: 1rem;
-    letter-spacing: 2px;
+  }
+  main .view3 .course-container {
+    flex-direction: row;
+    padding: 1rem 5rem;
+    gap: 2rem;
+  }
+  main .view3 .course-container .course {
+    padding: 1rem;
+  }
+  main .view3 .course-container .course p {
+    font-size: 0.8rem;
+  }
+  main .view3 .course-container .course h3 {
+    font-size: 1.4rem;
   }
 }
