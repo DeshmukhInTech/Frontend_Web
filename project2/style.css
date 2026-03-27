@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +34,7 @@ a {
 main {
   width: 100%;
 }
-main .view1 {
+main .home {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -42,7 +43,7 @@ main .view1 {
   background-size: cover;
   background-attachment: fixed;
 }
-main .view1 .content1 {
+main .home .home_content {
   z-index: 2;
   color: #ffffff;
   position: absolute;
@@ -55,7 +56,7 @@ main .view1 .content1 {
   align-items: center;
   width: 100%;
 }
-main .view1 .content1 h1 {
+main .home .home_content h1 {
   text-align: center;
   font-size: 3rem;
   color: #ffffff;
@@ -65,7 +66,7 @@ main .view1 .content1 h1 {
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-main .view1 .content1 p {
+main .home .home_content p {
   text-align: center;
   font-family: text;
   text-transform: uppercase;
@@ -74,13 +75,13 @@ main .view1 .content1 p {
   color: rgba(255, 255, 255, 0.7019607843);
   margin-bottom: 30px;
 }
-main .view1 .content1 button {
+main .home .home_content button {
   padding: 0.8rem 2.5rem;
   color: #ffffff;
   background: transparent;
   border: 1px solid #ffffff;
 }
-main .view2 {
+main .about {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -89,7 +90,7 @@ main .view2 {
   background-size: cover;
   background-attachment: fixed;
 }
-main .view3 {
+main .services {
   padding: 3rem 1rem;
   min-height: 100vh;
   background-image: url(resource/bg-05.png);
@@ -101,7 +102,7 @@ main .view3 {
   align-items: center;
   justify-content: center;
 }
-main .view3 .content3 {
+main .services .services_content {
   z-index: 2;
   color: #ffffff;
   padding: 1rem;
@@ -110,7 +111,7 @@ main .view3 .content3 {
   align-items: center;
   width: 100%;
 }
-main .view3 .content3 h1 {
+main .services .services_content h1 {
   font-size: 3rem;
   color: #ffffff;
   font-family: headings;
@@ -119,7 +120,7 @@ main .view3 .content3 h1 {
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-main .view3 .content3 p {
+main .services .services_content p {
   font-family: text;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -127,18 +128,18 @@ main .view3 .content3 p {
   color: rgba(255, 255, 255, 0.7019607843);
   margin-bottom: 30px;
 }
-main .view3 .content3 .course-container {
+main .services .services_content .services_container {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .view3 .content3 .course-container .course {
+main .services .services_content .services_container .service {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .view3 .content3 .course-container .course h3 {
+main .services .services_content .services_container .service h3 {
   text-align: center;
   font-size: 1.2rem;
   color: #ffffff;
@@ -148,13 +149,13 @@ main .view3 .content3 .course-container .course h3 {
   letter-spacing: 2px;
   margin: 20px 0;
 }
-main .view3 .content3 .course-container .course p {
+main .services .services_content .services_container .service p {
   font-size: 0.7rem;
 }
-main .view3 .content3 .course-container .course i {
+main .services .services_content .services_container .service i {
   font-size: 2rem;
 }
-main .view4 {
+main .gallery {
   width: 100%;
   position: relative;
   background-image: url(resource/bg-06.png);
@@ -169,14 +170,14 @@ main .view4 {
   text-align: center;
   padding: 3rem 1rem;
 }
-main .view4 .content {
+main .gallery .content {
   z-index: 2;
 }
-main .view4 .content .head {
+main .gallery .content .gallery_head {
   padding-bottom: 3rem;
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.631372549);
 }
-main .view4 .content .head h1 {
+main .gallery .content .gallery_head h1 {
   font-size: 3rem;
   color: #ffffff;
   font-family: headings;
@@ -185,27 +186,27 @@ main .view4 .content .head h1 {
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-main .view4 .content .head p {
+main .gallery .content .gallery_head p {
   font-family: text;
   font-size: 1.1rem;
   line-height: 2rem;
   font-weight: 100;
 }
-main .view4 .content .content4 {
+main .gallery .content .gallery_content {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
-main .view4 .content .content4 .box span {
+main .gallery .content .gallery_content .box span {
   display: inline-block;
   font-size: 3rem;
   font-family: headings;
   font-weight: 200;
   padding-bottom: 1rem;
 }
-main .view4 .content .content4 .box p {
+main .gallery .content .gallery_content .box p {
   font-family: text;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -213,55 +214,189 @@ main .view4 .content .content4 .box p {
   font-weight: 100;
   letter-spacing: 3px;
 }
+main .contact {
+  width: 100%;
+  position: relative;
+  background-image: url(resource/bg-07.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+main .contact .contact_content {
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+main .contact .contact_content div h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  font-family: headings;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+main .contact .contact_content div p {
+  font-family: text;
+  font-size: 0.8rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+main .contact .contact_content .contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+main .contact .contact_content .contact_form .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+main .contact .contact_content .contact_form .row input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.0666666667);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1rem 1rem;
+}
+main .contact .contact_content .contact_form textarea {
+  width: 100%;
+  resize: none;
+  min-height: 120px;
+  background: rgba(255, 255, 255, 0.0666666667);
+  padding: 1rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+main .contact .contact_content .contact_form input::-moz-placeholder, main .contact .contact_content .contact_form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7450980392);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+main .contact .contact_content .contact_form input::placeholder,
+main .contact .contact_content .contact_form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7450980392);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+main .contact .contact_content .contact_form button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.0666666667);
+  padding: 1rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  letter-spacing: 2px;
+}
+main footer {
+  background: rgba(0, 0, 0, 0.9333333333);
+  text-align: center;
+  padding: 1.6rem 2rem;
+}
+main footer p {
+  font-family: text;
+  color: rgba(255, 255, 255, 0.5215686275);
+  font-size: 0.8rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
 
 @media (min-width: 900px) {
-  main .view1 .content1 h1 {
+  main .home .home_content h1 {
     font-size: 4rem;
     letter-spacing: 8px;
   }
-  main .view1 .content1 p {
+  main .home .home_content p {
     font-size: 1rem;
     letter-spacing: 2px;
   }
-  main .view3 .content3 .course-container {
+  main .services .services_content .services_container {
     flex-direction: row;
     padding: 1rem 5rem;
     gap: 2rem;
   }
-  main .view3 .content3 .course-container .course {
+  main .services .services_content .services_container .service {
     padding: 1rem;
   }
-  main .view3 .content3 .course-container .course p {
+  main .services .services_content .services_container .service p {
     font-size: 0.8rem;
   }
-  main .view3 .content3 .course-container .course h3 {
+  main .services .services_content .services_container .service h3 {
     font-size: 1.4rem;
   }
-  main .view3 .content3 h1 {
+  main .services .services_content h1 {
     font-size: 4rem;
+    font-weight: 300;
     letter-spacing: 8px;
   }
-  main .view3 .content3 p {
+  main .services .services_content p {
     font-size: 1rem;
     letter-spacing: 2px;
   }
-  main .view4 {
+  main .gallery {
     min-height: 100vh;
   }
-  main .view4 .content {
+  main .gallery .content {
     width: 55%;
   }
-  main .view4 .content .head h1 {
+  main .gallery .content .gallery_head h1 {
     font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 8px;
   }
-  main .view4 .content .content4 {
+  main .gallery .content .gallery_content {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  main .view4 .content .content4 .box span {
+  main .gallery .content .gallery_content .box span {
     font-weight: 300;
   }
-  main .view4 .content .content4 .box p {
+  main .gallery .content .gallery_content .box p {
     opacity: 1;
+  }
+  main .contact {
+    min-height: 100vh;
+  }
+  main .contact .contact_content {
+    width: 55%;
+  }
+  main .contact .contact_content div h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+  }
+  main .contact .contact_content div p {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  main .contact .contact_content .contact_form {
+    align-items: flex-start;
+  }
+  main .contact .contact_content .contact_form .row {
+    flex-direction: row;
+  }
+  main .contact .contact_content .contact_form .row input {
+    width: 50%;
+  }
+  main .contact .contact_content .contact_form button {
+    width: 30%;
+  }
+  main footer {
+    padding: 2rem 2rem;
+  }
+  main footer p {
+    font-size: 0.9rem;
+    font-weight: 200;
   }
 }
