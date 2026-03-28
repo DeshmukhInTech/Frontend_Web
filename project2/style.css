@@ -31,6 +31,26 @@ a {
   z-index: 1;
 }
 
+.heading h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff;
+  font-family: headings;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.heading p {
+  text-align: center;
+  font-family: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7019607843);
+  margin-bottom: 30px;
+}
+
 main {
   width: 100%;
 }
@@ -55,25 +75,6 @@ main .home .home_content {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-main .home .home_content h1 {
-  text-align: center;
-  font-size: 3rem;
-  color: #ffffff;
-  font-family: headings;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-main .home .home_content p {
-  text-align: center;
-  font-family: text;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7019607843);
-  margin-bottom: 30px;
 }
 main .home .home_content button {
   padding: 0.8rem 2.5rem;
@@ -110,23 +111,6 @@ main .services .services_content {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-main .services .services_content h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  font-family: headings;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-main .services .services_content p {
-  font-family: text;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7019607843);
-  margin-bottom: 30px;
 }
 main .services .services_content .services_container {
   text-align: center;
@@ -177,15 +161,6 @@ main .gallery .content .gallery_head {
   padding-bottom: 3rem;
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.631372549);
 }
-main .gallery .content .gallery_head h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  font-family: headings;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
 main .gallery .content .gallery_head p {
   font-family: text;
   font-size: 1.1rem;
@@ -227,6 +202,7 @@ main .contact {
   justify-content: center;
   text-align: center;
   padding: 3rem 1rem;
+  min-height: 100vh;
 }
 main .contact .contact_content {
   width: 100%;
@@ -235,22 +211,7 @@ main .contact .contact_content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-}
-main .contact .contact_content div h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  font-family: headings;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-main .contact .contact_content div p {
-  font-family: text;
-  font-size: 0.8rem;
-  font-weight: 100;
-  letter-spacing: 3px;
+  gap: 1.5rem;
 }
 main .contact .contact_content .contact_form {
   display: flex;
