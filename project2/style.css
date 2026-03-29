@@ -31,6 +31,11 @@ a {
   z-index: 1;
 }
 
+p {
+  font-family: text;
+  font-weight: 200;
+}
+
 .heading h1 {
   text-align: center;
   font-size: 3rem;
@@ -85,11 +90,49 @@ main .home .home_content button {
 main .about {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   background-image: url(resource/bg-02.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+main .about a {
+  color: #fff;
+  text-decoration: underline;
+}
+main .about .about_content {
+  z-index: 2;
+  position: relative;
+  color: #fff;
+}
+main .about .about_content .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+main .about .about_content .col .about_item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+main .about .about_content .col .about_item img {
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+main .about .about_content .col .about_item p {
+  padding: 0.6rem 1rem;
+  text-align: center;
+  color: #fff;
 }
 main .services {
   padding: 3rem 1rem;
@@ -202,7 +245,6 @@ main .contact {
   justify-content: center;
   text-align: center;
   padding: 3rem 1rem;
-  min-height: 100vh;
 }
 main .contact .contact_content {
   width: 100%;
@@ -281,6 +323,25 @@ main footer p {
   main .home .home_content p {
     font-size: 1rem;
     letter-spacing: 2px;
+  }
+  main .about h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-weight: 300;
+  }
+  main .about .about_content {
+    width: 80%;
+    margin: auto;
+  }
+  main .about .about_content .col {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  main .about .about_content .col .about_item {
+    width: 100%;
+  }
+  main .about .about_content .col .about_item img {
+    width: 300px;
   }
   main .services .services_content .services_container {
     flex-direction: row;

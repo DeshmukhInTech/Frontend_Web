@@ -46,6 +46,11 @@ a {
     z-index: 1;
 }
 
+p {
+    font-family: text;
+    font-weight: 200;
+}
+
 .heading {
     h1 {
         text-align: center;
@@ -102,8 +107,51 @@ main {
     .about {
         position: relative;
         width: 100%;
-        min-height: 100vh;
+        // min-height: 100vh;
         @include bg-img(url(resource/bg-02.png));
+        padding: 3rem 2rem;
+        text-align: center;
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .about_content {
+            z-index: 2;
+            position: relative;
+            color: #fff;
+
+            .col {
+                @include flex-column();
+                gap: 2rem;
+                margin-bottom: 1rem;
+
+                .about_item {
+                    width: 100%;
+                    @include flex-column();
+                    background: rgba(0, 0, 0, 0.4);
+                    padding: 2rem 1rem;
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+
+                    img {
+                        width: 300px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        padding: 0.6rem 1rem;
+                        text-align: center;
+                        // font-size: 0.8rem;
+                        color: #fff;
+                    }
+
+
+                }
+            }
+        }
     }
 
     .services {
@@ -216,7 +264,6 @@ main {
         justify-content: center;
         text-align: center;
         padding: 3rem 1rem;
-        min-height: 100vh;   
 
         .contact_content {
             width: 100%;
@@ -306,6 +353,32 @@ main {
                 }
             }
 
+        }
+
+        .about {
+            h1 {
+                font-size: 4rem;
+                letter-spacing: 8px;
+                font-weight: 300;
+            }
+
+            .about_content {
+                width: 80%;
+                margin: auto;
+
+                .col {
+                    flex-direction: row;
+                    align-items: stretch;
+
+                    .about_item {
+                        width: 100%;
+
+                        img {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
         }
 
         .services {
